@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FileForge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header style="text-align: center;">
+        <h1>FileForge</h1>
+        <h2>Your Files, Your Control</h2>
+    </header>
+
+    <div class="container">
+        <button class="option-button" onclick="showForm('create')">Create a File</button>
+        <button class="option-button" onclick="showForm('read')">Read a File</button>
+        <button class="option-button" onclick="showForm('write')">Write to a File</button>
+        <button class="option-button" onclick="showForm('search')">Search in a File</button>
+
+        <div id="createForm" class="form-container">
+            <h3>Create a File</h3>
+            <div class="input-group">
+                <label for="createFileName">File Name</label>
+                <input type="text" id="createFileName" placeholder="Enter file name">
+            </div>
+            <div class="button-group">
+                <button onclick="createFile()">Create</button>
+            </div>
+            <span class="back-button" onclick="backToHome()">Back</span>
+        </div>
+
+        <div id="readForm" class="form-container">
+            <h3>Read a File</h3>
+            <div class="input-group">
+                <label for="readFileName">File Name</label>
+                <input type="text" id="readFileName" placeholder="Enter file name">
+            </div>
+            <div class="button-group">
+                <button onclick="readFile()">Read</button>
+            </div>
+            <span class="back-button" onclick="backToHome()">Back</span>
+        </div>
+
+        <div id="writeForm" class="form-container">
+            <h3>Write to a File</h3>
+            <div class="input-group">
+                <label for="writeFileName">File Name</label>
+                <input type="text" id="writeFileName" placeholder="Enter file name">
+            </div>
+            <div class="input-group">
+                <label for="writeContent">Content</label>
+                <textarea id="writeContent" placeholder="Enter content to write"></textarea>
+            </div>
+            <div class="button-group">
+                <button onclick="writeFile()">Write</button>
+            </div>
+            <span class="back-button" onclick="backToHome()">Back</span>
+        </div>
+
+        <div id="searchForm" class="form-container">
+            <h3>Search in a File</h3>
+            <div class="input-group">
+                <label for="searchFileName">File Name</label>
+                <input type="text" id="searchFileName" placeholder="Enter file name">
+            </div>
+            <div class="input-group">
+                <label for="searchWord">Search Word</label>
+                <input type="text" id="searchWord" placeholder="Enter word to search">
+            </div>
+            <div class="button-group">
+                <button onclick="searchFile()">Search</button>
+            </div>
+            <span class="back-button" onclick="backToHome()">Back</span>
+        </div>
+
+        <div id="result" class="result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
